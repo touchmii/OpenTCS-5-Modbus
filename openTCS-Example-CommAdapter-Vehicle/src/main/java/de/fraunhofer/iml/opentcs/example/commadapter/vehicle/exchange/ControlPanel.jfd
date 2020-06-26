@@ -1,0 +1,333 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "de.fraunhofer.iml.opentcs.example.commadapter.vehicle"
+	"i18n.bundleName": "Bundle"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "ControlPanel"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "org.opentcs.drivers.vehicle.management.VehicleCommAdapterPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :0:0:p, par l {seq {comp connectionSettingsPanel:::p:380:p, space :p:6:p, comp setOrderPanel:::p::p}, comp repeatOrderPanel:::p::p}, space :0:0:p}}"
+			"$verticalGroup": "par l {seq {space :0:0:p, par l {comp connectionSettingsPanel:::p::p, comp setOrderPanel:::p::p}, space :p:6:p, comp repeatOrderPanel:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0, 0, 0, 0"
+				"$rowSpecs": "0, 0, 0, 0, 0, 0"
+			} ) {
+				name: "connectionSettingsPanel"
+				"border": new javax.swing.border.TitledBorder( null, "Connection to vehicle", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "enableAdapterCheckBox"
+					"text": new FormMessage( null, "EnableAdapter" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enableAdapterCheckBoxActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"hAlign": 0
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "hostLabel"
+					"text": new FormMessage( null, "VehicleIpAddress" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "hostTextField"
+					"columns": 12
+					"text": "XXX.XXX.XXX.XXX"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "connectedButton"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDGray.gif" )
+					"text": new FormMessage( null, "AdapterConnected" )
+					"borderPainted": false
+					"disabledIcon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDRed.gif" )
+					"disabledSelectedIcon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDGreen.gif" )
+					"enabled": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"hAlign": 2
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "portLabel"
+					"text": new FormMessage( null, "VehicleTcpPort" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 1
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "portTextField"
+					"columns": 6
+					"text": "XXXXX"
+					auxiliary() {
+						"JavaCodeGenerator.preInitCode": "${field}.setDocument(new PlainDocument(){\r\n    @Override\r\n    public void insertString(int offs, String str, AttributeSet a)\r\n        throws BadLocationException {\r\n        try {\r\n            String oldString = getText(0, getLength());\r\n            StringBuilder newString = new StringBuilder(oldString);\r\n            newString.insert(offs, str);\r\n            int newValue = Integer.parseInt(newString.toString());\r\n            if (newValue >= 1 && newValue <= 65535) {\r\n                super.insertString(offs, str, a);\r\n            }\r\n        }\r\n        catch(NumberFormatException e) { }\r\n    }\r\n}\r\n);"
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"gridy": 1
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "activeButton"
+					"icon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDGray.gif" )
+					"text": new FormMessage( null, "ControlPanel.AdapterActive" )
+					"borderPainted": false
+					"disabledIcon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDRed.gif" )
+					"disabledSelectedIcon": new com.jformdesigner.model.SwingIcon( 0, "/de/fraunhofer/iml/opentcs/example/commadapter/vehicle/res/symbols/LEDGreen.gif" )
+					"enabled": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+					"hAlign": 2
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "aliveTimeoutLable"
+					"text": new FormMessage( null, "ControlPanel.IdleAfter" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 2
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "aliveTimeoutTextField"
+					"columns": 6
+					"text": "XXXXX"
+					auxiliary() {
+						"JavaCodeGenerator.preInitCode": "${field}.setDocument(new PlainDocument(){\r\n    @Override\r\n    public void insertString(int offs, String str, AttributeSet a)\r\n        throws BadLocationException {\r\n        try {\r\n            Integer.parseInt(str);\r\n            super.insertString(offs, str, a);\r\n        }\r\n        catch(NumberFormatException e) { }\r\n    }\r\n});"
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"gridy": 2
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "disconnectOnTimeoutChkBox"
+					"text": new FormMessage( null, "ControlPanel.DisconnectOnTimeout" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "disconnectOnTimeoutChkBoxActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+					"gridwidth": 2
+					"hAlign": 2
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "reconnectOnConnectionLossChkBox"
+					"text": new FormMessage( null, "ControlPanel.DisconnectOnConnectionLoss" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "reconnectOnConnectionLossChkBoxActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 4
+					"gridwidth": 2
+					"hAlign": 2
+					"vAlign": 0
+				} )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "enableLoggingChkBox"
+					"text": new FormMessage( null, "ControlPanel.EnableLogging" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enableLoggingChkBoxActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 5
+					"gridwidth": 2
+					"hAlign": 2
+					"vAlign": 0
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0, 0, 0"
+				"$rowSpecs": "0, 0, 0, 0"
+			} ) {
+				name: "setOrderPanel"
+				"border": new javax.swing.border.TitledBorder( null, "New order telegram", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "destinationLabel"
+					"text": new FormMessage( null, "OrderDestination" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "destinationComboBox"
+					"editable": true
+					auxiliary() {
+						"JavaCodeGenerator.preInitCode": "${field}.setEditor(new TCSObjectComboBoxEditor());\n${field}.setRenderer(new StringListCellRenderer<Point>(point -> point.getName()));"
+						"JavaCodeGenerator.typeParameters": "Point"
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "actionLabel"
+					"text": new FormMessage( null, "OrderAction" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "actionComboBox"
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "OrderRequest.OrderAction"
+					}
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 1
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "orderIdLabel"
+					"text": new FormMessage( null, "OrderID" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 2
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "orderIdTextField"
+					"columns": 6
+					"text": "1"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 2
+					"hAlign": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "sendOrderButton"
+					"text": new FormMessage( null, "SendNewOrder" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "sendOrderButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 3
+					"gridwidth": 2
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 3, 3 )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {comp lastOrdersScrollPane:::p:166:p, space :::p, comp lastOrderDetailsPanel:::p::p, space :0:0:p}}"
+				"$verticalGroup": "par l {seq l {par l:::p {comp lastOrdersScrollPane::l:::x, comp lastOrderDetailsPanel::l:::p}, space :0:0:p}}"
+			} ) {
+				name: "repeatOrderPanel"
+				"border": new javax.swing.border.TitledBorder( null, "Last orders sent to vehicle", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+				"minimumSize": new java.awt.Dimension( 199, 170 )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "lastOrdersScrollPane"
+					add( new FormComponent( "javax.swing.JList" ) {
+						name: "lastOrdersList"
+						"selectionMode": 0
+						auxiliary() {
+							"JavaCodeGenerator.preInitCode": "${field}.setModel(lastOrderListModel);\n${field}.setCellRenderer(new OrderListCellRenderer());"
+							"JavaCodeGenerator.typeParameters": "OrderRequest"
+						}
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0"
+					"$rowSpecs": "0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0"
+				} ) {
+					name: "lastOrderDetailsPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "destinationLabel1"
+						"text": new FormMessage( null, "OrderDestination" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 3, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastDestinationTextField"
+						"editable": false
+						"columns": 12
+						"horizontalAlignment": 4
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"hAlign": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "actionLabel1"
+						"text": new FormMessage( null, "OrderAction" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 9
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 3, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastActionTextField"
+						"editable": false
+						"columns": 12
+						"horizontalAlignment": 4
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 9
+						"hAlign": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "lastOrderIdLabel"
+						"text": new FormMessage( null, "OrderID" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 11
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 3, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "lastOrderIdTextField"
+						"editable": false
+						"columns": 6
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 11
+						"hAlign": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "repeatLastOrderButton"
+						"text": new FormMessage( null, "SendLastOrderAgain" )
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "repeatLastOrderButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 12
+						"gridwidth": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 3, 3, 3 )
+					} )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 755, 530 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

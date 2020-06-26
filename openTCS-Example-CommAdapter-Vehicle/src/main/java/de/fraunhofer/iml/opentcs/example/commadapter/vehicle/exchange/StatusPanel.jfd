@@ -1,0 +1,271 @@
+JFDML JFormDesigner: "7.0.0.6.255" Java: "11.0.7" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "de.fraunhofer.iml.opentcs.example.commadapter.vehicle"
+	"i18n.bundleName": "Bundle"
+	"i18n.autoExternalize": false
+	"i18n.keyPrefix": "StatusPanel"
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "org.opentcs.drivers.vehicle.management.VehicleCommAdapterPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0"
+			"$rowSpecs": "0, 0, 0, 0"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0, 0"
+				"$rowSpecs": "0, 0"
+			} ) {
+				name: "panelPeriodicStateRequests"
+				"border": new javax.swing.border.TitledBorder( null, "Periodic state requests", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+				"maximumSize": new java.awt.Dimension( 2147483647, 70 )
+				add( new FormComponent( "javax.swing.JCheckBox" ) {
+					name: "chkBoxEnablePeriodicGetState"
+					"selected": true
+					"text": new FormMessage( null, "EnablePeriodicStateRequests" )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "chkBoxEnablePeriodicGetStateActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridwidth": 2
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "labelGetStateInterval"
+					"text": new FormMessage( null, "StateRequestInterval" )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridy": 1
+					"hAlign": 0
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 0 )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "txtGetStateInterval"
+					"editable": false
+					"columns": 4
+					"horizontalAlignment": 4
+					"text": "500"
+					"minimumSize": new java.awt.Dimension( 38, 20 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 1
+					"hAlign": 4
+					"vAlign": 0
+					"insets": new java.awt.Insets( 0, 3, 0, 3 )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+				name: "panelManualStateRequest"
+				"border": new javax.swing.border.TitledBorder( null, "Manual state requests", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "buttonGetState"
+					"text": new FormMessage( null, "SendStateRequest" )
+					"enabled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonGetStateActionPerformed", true ) )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "card2"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"weightx": 1.0
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "panelState"
+				"border": new javax.swing.border.EmptyBorder( 1, 1, 1, 1 )
+				"font": new java.awt.Font( "Arial", 0, 11 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0, 0, 0, 0, 0, 0"
+					"$rowSpecs": "0, 0, 0"
+				} ) {
+					name: "panelTelegramContent"
+					"border": new javax.swing.border.TitledBorder( null, "Last reported state", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelStateTeleCount"
+						"text": new FormMessage( null, "OrderID" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldStateTeleCount"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 6
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "00000"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"vAlign": 3
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelStateOS"
+						"text": new FormMessage( null, "OperationState" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldStateOS"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 1
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "X"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelStateLS"
+						"text": new FormMessage( null, "LoadState" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"gridy": 1
+						"hAlign": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 6, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldStateLS"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 1
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "X"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+						"gridy": 1
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelStateCRP"
+						"text": new FormMessage( null, "currentPoint" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+						"gridy": 1
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 6, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldStateCRP"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 9
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "CURPOINT"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 5
+						"gridy": 1
+						"vAlign": 3
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "fillingLabel2"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"hAlign": 0
+						"vAlign": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelLastOrderID"
+						"text": new FormMessage( null, "LastFinishedOrder" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 2
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldLastOrderID"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 6
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "00000"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 2
+						"vAlign": 3
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelCurrOrderID"
+						"text": new FormMessage( null, "currentOrderID" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"gridy": 2
+						"hAlign": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 6, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldCurrOrderID"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 6
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "11111"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+						"gridy": 2
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "labelLastRcvdOrderID"
+						"text": new FormMessage( null, "lastReceivedOrderID" )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+						"gridy": 2
+						"hAlign": 4
+						"vAlign": 0
+						"insets": new java.awt.Insets( 0, 6, 0, 3 )
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textFieldLastRcvdOrderID"
+						"editable": false
+						"background": new java.awt.Color( 255, 255, 204, 255 )
+						"columns": 6
+						"font": new java.awt.Font( "Monospaced", 0, 11 )
+						"horizontalAlignment": 11
+						"text": "22222"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 5
+						"gridy": 2
+						"vAlign": 3
+						"insets": new java.awt.Insets( 0, 0, 3, 0 )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"gridwidth": 2
+				"weightx": 1.0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "fillingLabel1"
+				"font": new java.awt.Font( "Arial", 0, 11 )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+				"gridwidth": 2
+				"weightx": 1.0
+				"weighty": 1.0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 615, 300 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}
