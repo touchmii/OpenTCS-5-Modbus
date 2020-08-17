@@ -8,13 +8,14 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormContainer( "org.opentcs.drivers.vehicle.management.VehicleCommAdapterPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {seq {space :0:0:p, par l {seq {comp connectionSettingsPanel:::p:380:p, space :p:6:p, comp setOrderPanel:::p::p}, comp repeatOrderPanel:::p::p}, space :0:0:p}}"
+			"$horizontalGroup": "par l {seq {space :0:0:p, par l {seq {comp connectionSettingsPanel:::p:400:p, space :p:6:p, comp setOrderPanel:::p::p}, comp repeatOrderPanel:::p::p}, space :0:0:p}}"
 			"$verticalGroup": "par l {seq {space :0:0:p, par l {comp connectionSettingsPanel:::p::p, comp setOrderPanel:::p::p}, space :p:6:p, comp repeatOrderPanel:::p::p, space :::x}}"
 		} ) {
 			name: "this"
 			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
-				"$columnSpecs": "0, 0, 0, 0"
+				"$columnSpecs": "0, 0, 0, 0, 0, 0"
 				"$rowSpecs": "0, 0, 0, 0, 0, 0"
+				"$alignLeft": true
 			} ) {
 				name: "connectionSettingsPanel"
 				"border": new javax.swing.border.TitledBorder( null, "Connection to vehicle", 4, 0, new java.awt.Font( "Tahoma", 1, 11 ), null )
@@ -41,9 +42,12 @@ new FormModel {
 					"text": "XXX.XXX.XXX.XXX"
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 2
-					"hAlign": 2
+					"hAlign": 5
 					"vAlign": 0
 					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					"gridwidth": 4
+					"weightx": 10.0
+					"weighty": 10.0
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "connectedButton"
@@ -78,9 +82,10 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 2
 					"gridy": 1
-					"hAlign": 2
+					"hAlign": 5
 					"vAlign": 0
 					"insets": new java.awt.Insets( 0, 0, 3, 3 )
+					"gridwidth": 2
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "activeButton"
@@ -115,7 +120,7 @@ new FormModel {
 				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
 					"gridx": 2
 					"gridy": 2
-					"hAlign": 2
+					"hAlign": 5
 					"vAlign": 0
 					"insets": new java.awt.Insets( 0, 0, 3, 3 )
 				} )

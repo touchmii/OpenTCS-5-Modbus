@@ -21,4 +21,11 @@ dependencies {
   
   compile group: 'commons-codec', name: 'commons-codec', version: '1.10'
   compileOnly group: 'commons-codec', name: 'commons-codec', version: '1.10', classifier: 'sources'
+
+  // https://mvnrepository.com/artifact/uk.co.caprica/vlcj
+  compile group: 'uk.co.caprica', name: 'vlcj', version: '4.5.2'
+
+  // https://mvnrepository.com/artifact/org.apache.plc4x/plc4j-driver-modbus
+//  compile group: 'org.apache.plc4x', name: 'plc4j-driver-modbus', version: '0.7.0'
+
 }

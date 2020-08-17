@@ -97,6 +97,10 @@ public class ExampleCommAdapterPanelFactory
                                                     servicePortal.getVehicleService()));
     panels.add(componentsFactory.createStatusPanel((ExampleProcessModelTO) processModel,
                                                    servicePortal.getVehicleService()));
+    panels.add(componentsFactory.createmyPanel((ExampleProcessModelTO) processModel,
+                                                   servicePortal.getVehicleService()));
+    panels.add(componentsFactory.createmyControlPanel((ExampleProcessModelTO) processModel,
+                                                   servicePortal.getVehicleService()));
     return panels;
   }
 

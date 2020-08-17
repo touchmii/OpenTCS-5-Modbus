@@ -11,7 +11,6 @@ import org.opentcs.components.kernel.services.VehicleService;
  * @author Martin Grzenia (Fraunhofer IML)
  */
 public interface AdapterPanelComponentsFactory {
-
   /**
    * Creates a {@link ControlPanel} representing the given process model's content.
    *
@@ -22,6 +21,9 @@ public interface AdapterPanelComponentsFactory {
   ControlPanel createControlPanel(ExampleProcessModelTO processModel,
                                   VehicleService vehicleService);
 
+  myPanel2 createmyPanel(ExampleProcessModelTO processModel, VehicleService vehicleService);
+
+
   /**
    * Creates a {@link StatusPanel} representing the given process model's content.
    *
@@ -31,4 +33,6 @@ public interface AdapterPanelComponentsFactory {
    */
   StatusPanel createStatusPanel(ExampleProcessModelTO processModel,
                                 VehicleService vehicleService);
+  myControlPanel createmyControlPanel(ExampleProcessModelTO processModel,
+                                   VehicleService vehicleService);
 }

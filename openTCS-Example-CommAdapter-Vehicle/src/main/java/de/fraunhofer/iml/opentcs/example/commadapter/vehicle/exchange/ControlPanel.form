@@ -25,7 +25,7 @@
               <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="connectionSettingsPanel" min="-2" pref="380" max="-2" attributes="0"/>
+                      <Component id="connectionSettingsPanel" min="-2" pref="400" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                       <Component id="setOrderPanel" min="-2" max="-2" attributes="0"/>
                   </Group>

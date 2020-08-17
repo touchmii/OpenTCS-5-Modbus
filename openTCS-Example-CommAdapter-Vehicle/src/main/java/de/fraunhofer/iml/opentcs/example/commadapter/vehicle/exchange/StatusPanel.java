@@ -3,9 +3,6 @@
  */
 package de.fraunhofer.iml.opentcs.example.commadapter.vehicle.exchange;
 
-import java.awt.*;
-import javax.swing.*;
-import javax.swing.border.*;
 import com.google.inject.assistedinject.Assisted;
 import de.fraunhofer.iml.opentcs.example.commadapter.vehicle.ExampleProcessModel;
 import de.fraunhofer.iml.opentcs.example.commadapter.vehicle.exchange.commands.SendRequestCommand;
@@ -184,241 +181,287 @@ public class StatusPanel
    */
   @SuppressWarnings("unchecked")
   // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-  // Generated using JFormDesigner Evaluation license - Benoni Jiang
   private void initComponents() {
-      ResourceBundle bundle = ResourceBundle.getBundle("de.fraunhofer.iml.opentcs.example.commadapter.vehicle.Bundle");
-      panelPeriodicStateRequests = new JPanel();
-      chkBoxEnablePeriodicGetState = new JCheckBox();
-      labelGetStateInterval = new JLabel();
-      txtGetStateInterval = new JTextField();
-      panelManualStateRequest = new JPanel();
-      buttonGetState = new JButton();
-      panelState = new JPanel();
-      panelTelegramContent = new JPanel();
-      labelStateTeleCount = new JLabel();
-      textFieldStateTeleCount = new JTextField();
-      labelStateOS = new JLabel();
-      textFieldStateOS = new JTextField();
-      labelStateLS = new JLabel();
-      textFieldStateLS = new JTextField();
-      labelStateCRP = new JLabel();
-      textFieldStateCRP = new JTextField();
-      fillingLabel2 = new JLabel();
-      labelLastOrderID = new JLabel();
-      textFieldLastOrderID = new JTextField();
-      labelCurrOrderID = new JLabel();
-      textFieldCurrOrderID = new JTextField();
-      labelLastRcvdOrderID = new JLabel();
-      textFieldLastRcvdOrderID = new JTextField();
-      fillingLabel1 = new JLabel();
+    java.awt.GridBagConstraints gridBagConstraints;
 
-      //======== this ========
-      setBorder(new javax.swing.border.CompoundBorder(new javax.swing.border.TitledBorder(
-      new javax.swing.border.EmptyBorder(0,0,0,0), "JF\u006frmD\u0065sig\u006eer \u0045val\u0075ati\u006fn"
-      ,javax.swing.border.TitledBorder.CENTER,javax.swing.border.TitledBorder.BOTTOM
-      ,new java.awt.Font("Dia\u006cog",java.awt.Font.BOLD,12)
-      ,java.awt.Color.red), getBorder())); addPropertyChangeListener(
-      new java.beans.PropertyChangeListener(){@Override public void propertyChange(java.beans.PropertyChangeEvent e
-      ){if("\u0062ord\u0065r".equals(e.getPropertyName()))throw new RuntimeException()
-      ;}});
-      setLayout(new GridBagLayout());
+    panelPeriodicStateRequests = new javax.swing.JPanel();
+    chkBoxEnablePeriodicGetState = new javax.swing.JCheckBox();
+    labelGetStateInterval = new javax.swing.JLabel();
+    txtGetStateInterval = new javax.swing.JTextField();
+    panelManualStateRequest = new javax.swing.JPanel();
+    buttonGetState = new javax.swing.JButton();
+    panelState = new javax.swing.JPanel();
+    panelTelegramContent = new javax.swing.JPanel();
+    labelStateTeleCount = new javax.swing.JLabel();
+    textFieldStateTeleCount = new javax.swing.JTextField();
+    labelStateOS = new javax.swing.JLabel();
+    textFieldStateOS = new javax.swing.JTextField();
+    labelStateLS = new javax.swing.JLabel();
+    textFieldStateLS = new javax.swing.JTextField();
+    labelStateCRP = new javax.swing.JLabel();
+    textFieldStateCRP = new javax.swing.JTextField();
+    fillingLabel2 = new javax.swing.JLabel();
+    labelLastOrderID = new javax.swing.JLabel();
+    textFieldLastOrderID = new javax.swing.JTextField();
+    labelCurrOrderID = new javax.swing.JLabel();
+    textFieldCurrOrderID = new javax.swing.JTextField();
+    labelLastRcvdOrderID = new javax.swing.JLabel();
+    textFieldLastRcvdOrderID = new javax.swing.JTextField();
+    panelTelegramContentFiller = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 32767));
+    fillingLabel1 = new javax.swing.JLabel();
 
-      //======== panelPeriodicStateRequests ========
-      {
-          panelPeriodicStateRequests.setBorder(new TitledBorder(null, "Periodic state requests", TitledBorder.LEADING, TitledBorder.DEFAULT_POSITION,
-              new Font("Tahoma", Font.BOLD, 11)));
-          panelPeriodicStateRequests.setMaximumSize(new Dimension(2147483647, 70));
-          panelPeriodicStateRequests.setLayout(new GridBagLayout());
+    setLayout(new java.awt.GridBagLayout());
 
-          //---- chkBoxEnablePeriodicGetState ----
-          chkBoxEnablePeriodicGetState.setSelected(true);
-          chkBoxEnablePeriodicGetState.setText(bundle.getString("EnablePeriodicStateRequests"));
-          chkBoxEnablePeriodicGetState.addActionListener(e -> chkBoxEnablePeriodicGetStateActionPerformed(e));
-          panelPeriodicStateRequests.add(chkBoxEnablePeriodicGetState, new GridBagConstraints(0, 0, 2, 1, 0.0, 0.0,
-              GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-              new Insets(0, 0, 0, 0), 0, 0));
+    java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("de/fraunhofer/iml/opentcs/example/commadapter/vehicle/Bundle"); // NOI18N
+    panelPeriodicStateRequests.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("PeriodicStateRequestsTitle"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+    panelPeriodicStateRequests.setMaximumSize(new java.awt.Dimension(2147483647, 70));
+    panelPeriodicStateRequests.setLayout(new java.awt.GridBagLayout());
 
-          //---- labelGetStateInterval ----
-          labelGetStateInterval.setText(bundle.getString("StateRequestInterval"));
-          panelPeriodicStateRequests.add(labelGetStateInterval, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
-              GridBagConstraints.CENTER, GridBagConstraints.NONE,
-              new Insets(0, 3, 0, 0), 0, 0));
-
-          //---- txtGetStateInterval ----
-          txtGetStateInterval.setEditable(false);
-          txtGetStateInterval.setColumns(4);
-          txtGetStateInterval.setHorizontalAlignment(SwingConstants.RIGHT);
-          txtGetStateInterval.setText("500");
-          txtGetStateInterval.setMinimumSize(new Dimension(38, 20));
-          panelPeriodicStateRequests.add(txtGetStateInterval, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
-              GridBagConstraints.EAST, GridBagConstraints.NONE,
-              new Insets(0, 3, 0, 3), 0, 0));
+    chkBoxEnablePeriodicGetState.setSelected(true);
+    chkBoxEnablePeriodicGetState.setText(bundle.getString("EnablePeriodicStateRequests")); // NOI18N
+    chkBoxEnablePeriodicGetState.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        chkBoxEnablePeriodicGetStateActionPerformed(evt);
       }
-      add(panelPeriodicStateRequests, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-          GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-          new Insets(0, 0, 0, 0), 0, 0));
+    });
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridwidth = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    panelPeriodicStateRequests.add(chkBoxEnablePeriodicGetState, gridBagConstraints);
 
-      //======== panelManualStateRequest ========
-      {
-          panelManualStateRequest.setBorder(new TitledBorder(null, "Manual state requests", TitledBorder.LEADING, TitledBorder.DEFAULT_POSITION,
-              new Font("Tahoma", Font.BOLD, 11)));
-          panelManualStateRequest.setLayout(new CardLayout());
+    labelGetStateInterval.setText(bundle.getString("StateRequestInterval")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 0);
+    panelPeriodicStateRequests.add(labelGetStateInterval, gridBagConstraints);
 
-          //---- buttonGetState ----
-          buttonGetState.setText(bundle.getString("SendStateRequest"));
-          buttonGetState.setEnabled(false);
-          buttonGetState.addActionListener(e -> buttonGetStateActionPerformed(e));
-          panelManualStateRequest.add(buttonGetState, "card2");
+    txtGetStateInterval.setEditable(false);
+    txtGetStateInterval.setColumns(4);
+    txtGetStateInterval.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+    txtGetStateInterval.setText("500");
+    txtGetStateInterval.setMinimumSize(new java.awt.Dimension(38, 20));
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 1;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 3, 0, 3);
+    panelPeriodicStateRequests.add(txtGetStateInterval, gridBagConstraints);
+
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 0;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    add(panelPeriodicStateRequests, gridBagConstraints);
+
+    panelManualStateRequest.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("ManualStateRequestsTitle"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+    panelManualStateRequest.setLayout(new java.awt.CardLayout());
+
+    buttonGetState.setText(bundle.getString("SendStateRequest")); // NOI18N
+    buttonGetState.setEnabled(false);
+    buttonGetState.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        buttonGetStateActionPerformed(evt);
       }
-      add(panelManualStateRequest, new GridBagConstraints(1, 0, 1, 1, 1.0, 0.0,
-          GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-          new Insets(0, 0, 0, 0), 0, 0));
+    });
+    panelManualStateRequest.add(buttonGetState, "card2");
 
-      //======== panelState ========
-      {
-          panelState.setBorder(new EmptyBorder(1, 1, 1, 1));
-          panelState.setFont(new Font("Arial", Font.PLAIN, 11));
-          panelState.setLayout(new BorderLayout());
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 1;
+    gridBagConstraints.gridy = 0;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    gridBagConstraints.weightx = 1.0;
+    add(panelManualStateRequest, gridBagConstraints);
 
-          //======== panelTelegramContent ========
-          {
-              panelTelegramContent.setBorder(new TitledBorder(null, "Last reported state", TitledBorder.LEADING, TitledBorder.DEFAULT_POSITION,
-                  new Font("Tahoma", Font.BOLD, 11)));
-              panelTelegramContent.setLayout(new GridBagLayout());
+    panelState.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+    panelState.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+    panelState.setLayout(new java.awt.BorderLayout());
 
-              //---- labelStateTeleCount ----
-              labelStateTeleCount.setText(bundle.getString("OrderID"));
-              panelTelegramContent.add(labelStateTeleCount, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.EAST, GridBagConstraints.NONE,
-                  new Insets(0, 0, 0, 3), 0, 0));
+    panelTelegramContent.setBorder(javax.swing.BorderFactory.createTitledBorder(null, bundle.getString("LastReportedState"), javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
+    panelTelegramContent.setLayout(new java.awt.GridBagLayout());
 
-              //---- textFieldStateTeleCount ----
-              textFieldStateTeleCount.setEditable(false);
-              textFieldStateTeleCount.setBackground(new Color(255, 255, 204));
-              textFieldStateTeleCount.setColumns(6);
-              textFieldStateTeleCount.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldStateTeleCount.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldStateTeleCount.setText("00000");
-              panelTelegramContent.add(textFieldStateTeleCount, new GridBagConstraints(1, 0, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
+    labelStateTeleCount.setText(bundle.getString("OrderID")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 0;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+    panelTelegramContent.add(labelStateTeleCount, gridBagConstraints);
 
-              //---- labelStateOS ----
-              labelStateOS.setText(bundle.getString("OperationState"));
-              panelTelegramContent.add(labelStateOS, new GridBagConstraints(0, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.EAST, GridBagConstraints.NONE,
-                  new Insets(0, 0, 0, 3), 0, 0));
+    textFieldStateTeleCount.setEditable(false);
+    textFieldStateTeleCount.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldStateTeleCount.setColumns(6);
+    textFieldStateTeleCount.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldStateTeleCount.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldStateTeleCount.setText("00000");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 1;
+    gridBagConstraints.gridy = 0;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldStateTeleCount, gridBagConstraints);
 
-              //---- textFieldStateOS ----
-              textFieldStateOS.setEditable(false);
-              textFieldStateOS.setBackground(new Color(255, 255, 204));
-              textFieldStateOS.setColumns(1);
-              textFieldStateOS.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldStateOS.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldStateOS.setText("X");
-              panelTelegramContent.add(textFieldStateOS, new GridBagConstraints(1, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
+    labelStateOS.setText(bundle.getString("OperationState")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 3);
+    panelTelegramContent.add(labelStateOS, gridBagConstraints);
 
-              //---- labelStateLS ----
-              labelStateLS.setText(bundle.getString("LoadState"));
-              panelTelegramContent.add(labelStateLS, new GridBagConstraints(2, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.WEST, GridBagConstraints.NONE,
-                  new Insets(0, 6, 0, 3), 0, 0));
+    textFieldStateOS.setEditable(false);
+    textFieldStateOS.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldStateOS.setColumns(1);
+    textFieldStateOS.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldStateOS.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldStateOS.setText("X");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 1;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldStateOS, gridBagConstraints);
 
-              //---- textFieldStateLS ----
-              textFieldStateLS.setEditable(false);
-              textFieldStateLS.setBackground(new Color(255, 255, 204));
-              textFieldStateLS.setColumns(1);
-              textFieldStateLS.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldStateLS.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldStateLS.setText("X");
-              panelTelegramContent.add(textFieldStateLS, new GridBagConstraints(3, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
+    labelStateLS.setText(bundle.getString("LoadState")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 2;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 3);
+    panelTelegramContent.add(labelStateLS, gridBagConstraints);
 
-              //---- labelStateCRP ----
-              labelStateCRP.setText(bundle.getString("currentPoint"));
-              panelTelegramContent.add(labelStateCRP, new GridBagConstraints(4, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.EAST, GridBagConstraints.NONE,
-                  new Insets(0, 6, 0, 3), 0, 0));
+    textFieldStateLS.setEditable(false);
+    textFieldStateLS.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldStateLS.setColumns(1);
+    textFieldStateLS.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldStateLS.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldStateLS.setText("X");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 3;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldStateLS, gridBagConstraints);
 
-              //---- textFieldStateCRP ----
-              textFieldStateCRP.setEditable(false);
-              textFieldStateCRP.setBackground(new Color(255, 255, 204));
-              textFieldStateCRP.setColumns(9);
-              textFieldStateCRP.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldStateCRP.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldStateCRP.setText("CURPOINT");
-              panelTelegramContent.add(textFieldStateCRP, new GridBagConstraints(5, 1, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
-              panelTelegramContent.add(fillingLabel2, new GridBagConstraints(2, 0, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.CENTER, GridBagConstraints.NONE,
-                  new Insets(0, 0, 0, 0), 0, 0));
+    labelStateCRP.setText(bundle.getString("currentPoint")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 4;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 3);
+    panelTelegramContent.add(labelStateCRP, gridBagConstraints);
 
-              //---- labelLastOrderID ----
-              labelLastOrderID.setText(bundle.getString("LastFinishedOrder"));
-              panelTelegramContent.add(labelLastOrderID, new GridBagConstraints(0, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.EAST, GridBagConstraints.NONE,
-                  new Insets(0, 0, 3, 3), 0, 0));
+    textFieldStateCRP.setEditable(false);
+    textFieldStateCRP.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldStateCRP.setColumns(9);
+    textFieldStateCRP.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldStateCRP.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldStateCRP.setText("CURPOINT");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 5;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldStateCRP, gridBagConstraints);
+    panelTelegramContent.add(fillingLabel2, new java.awt.GridBagConstraints());
 
-              //---- textFieldLastOrderID ----
-              textFieldLastOrderID.setEditable(false);
-              textFieldLastOrderID.setBackground(new Color(255, 255, 204));
-              textFieldLastOrderID.setColumns(6);
-              textFieldLastOrderID.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldLastOrderID.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldLastOrderID.setText("00000");
-              panelTelegramContent.add(textFieldLastOrderID, new GridBagConstraints(1, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
+    labelLastOrderID.setText(bundle.getString("LastFinishedOrder")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 3);
+    panelTelegramContent.add(labelLastOrderID, gridBagConstraints);
 
-              //---- labelCurrOrderID ----
-              labelCurrOrderID.setText(bundle.getString("currentOrderID"));
-              panelTelegramContent.add(labelCurrOrderID, new GridBagConstraints(2, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.WEST, GridBagConstraints.NONE,
-                  new Insets(0, 6, 0, 3), 0, 0));
+    textFieldLastOrderID.setEditable(false);
+    textFieldLastOrderID.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldLastOrderID.setColumns(6);
+    textFieldLastOrderID.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldLastOrderID.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldLastOrderID.setText("00000");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 1;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldLastOrderID, gridBagConstraints);
 
-              //---- textFieldCurrOrderID ----
-              textFieldCurrOrderID.setEditable(false);
-              textFieldCurrOrderID.setBackground(new Color(255, 255, 204));
-              textFieldCurrOrderID.setColumns(6);
-              textFieldCurrOrderID.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldCurrOrderID.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldCurrOrderID.setText("11111");
-              panelTelegramContent.add(textFieldCurrOrderID, new GridBagConstraints(3, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
+    labelCurrOrderID.setText(bundle.getString("currentOrderID")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 2;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 3);
+    panelTelegramContent.add(labelCurrOrderID, gridBagConstraints);
 
-              //---- labelLastRcvdOrderID ----
-              labelLastRcvdOrderID.setText(bundle.getString("lastReceivedOrderID"));
-              panelTelegramContent.add(labelLastRcvdOrderID, new GridBagConstraints(4, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.EAST, GridBagConstraints.NONE,
-                  new Insets(0, 6, 0, 3), 0, 0));
+    textFieldCurrOrderID.setEditable(false);
+    textFieldCurrOrderID.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldCurrOrderID.setColumns(6);
+    textFieldCurrOrderID.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldCurrOrderID.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldCurrOrderID.setText("11111");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 3;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldCurrOrderID, gridBagConstraints);
 
-              //---- textFieldLastRcvdOrderID ----
-              textFieldLastRcvdOrderID.setEditable(false);
-              textFieldLastRcvdOrderID.setBackground(new Color(255, 255, 204));
-              textFieldLastRcvdOrderID.setColumns(6);
-              textFieldLastRcvdOrderID.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 11));
-              textFieldLastRcvdOrderID.setHorizontalAlignment(SwingConstants.TRAILING);
-              textFieldLastRcvdOrderID.setText("22222");
-              panelTelegramContent.add(textFieldLastRcvdOrderID, new GridBagConstraints(5, 2, 1, 1, 0.0, 0.0,
-                  GridBagConstraints.SOUTH, GridBagConstraints.HORIZONTAL,
-                  new Insets(0, 0, 3, 0), 0, 0));
-          }
-          panelState.add(panelTelegramContent, BorderLayout.CENTER);
-      }
-      add(panelState, new GridBagConstraints(0, 1, 2, 1, 1.0, 0.0,
-          GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-          new Insets(0, 0, 0, 0), 0, 0));
+    labelLastRcvdOrderID.setText(bundle.getString("lastReceivedOrderID")); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 4;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.EAST;
+    gridBagConstraints.insets = new java.awt.Insets(0, 6, 0, 3);
+    panelTelegramContent.add(labelLastRcvdOrderID, gridBagConstraints);
 
-      //---- fillingLabel1 ----
-      fillingLabel1.setFont(new Font("Arial", Font.PLAIN, 11));
-      add(fillingLabel1, new GridBagConstraints(0, 3, 2, 1, 1.0, 1.0,
-          GridBagConstraints.CENTER, GridBagConstraints.BOTH,
-          new Insets(0, 0, 0, 0), 0, 0));
+    textFieldLastRcvdOrderID.setEditable(false);
+    textFieldLastRcvdOrderID.setBackground(new java.awt.Color(255, 255, 204));
+    textFieldLastRcvdOrderID.setColumns(6);
+    textFieldLastRcvdOrderID.setFont(new java.awt.Font("Monospaced", 0, 11)); // NOI18N
+    textFieldLastRcvdOrderID.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
+    textFieldLastRcvdOrderID.setText("22222");
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 5;
+    gridBagConstraints.gridy = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+    gridBagConstraints.anchor = java.awt.GridBagConstraints.SOUTH;
+    gridBagConstraints.insets = new java.awt.Insets(0, 0, 3, 0);
+    panelTelegramContent.add(textFieldLastRcvdOrderID, gridBagConstraints);
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 6;
+    gridBagConstraints.gridy = 0;
+    gridBagConstraints.gridheight = 3;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    gridBagConstraints.weightx = 1.0;
+    panelTelegramContent.add(panelTelegramContentFiller, gridBagConstraints);
+
+    panelState.add(panelTelegramContent, java.awt.BorderLayout.CENTER);
+
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 1;
+    gridBagConstraints.gridwidth = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    gridBagConstraints.weightx = 1.0;
+    add(panelState, gridBagConstraints);
+
+    fillingLabel1.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
+    gridBagConstraints = new java.awt.GridBagConstraints();
+    gridBagConstraints.gridx = 0;
+    gridBagConstraints.gridy = 3;
+    gridBagConstraints.gridwidth = 2;
+    gridBagConstraints.fill = java.awt.GridBagConstraints.BOTH;
+    gridBagConstraints.weightx = 1.0;
+    gridBagConstraints.weighty = 1.0;
+    add(fillingLabel1, gridBagConstraints);
+
+    getAccessibleContext().setAccessibleName(bundle.getString("StatusPanelTitle")); // NOI18N
   }// </editor-fold>//GEN-END:initComponents
 
     private void chkBoxEnablePeriodicGetStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chkBoxEnablePeriodicGetStateActionPerformed
@@ -462,30 +505,30 @@ public class StatusPanel
   }
 
   // Variables declaration - do not modify//GEN-BEGIN:variables
-  // Generated using JFormDesigner Evaluation license - Benoni Jiang
-  private JPanel panelPeriodicStateRequests;
-  private JCheckBox chkBoxEnablePeriodicGetState;
-  private JLabel labelGetStateInterval;
-  private JTextField txtGetStateInterval;
-  private JPanel panelManualStateRequest;
-  private JButton buttonGetState;
-  private JPanel panelState;
-  private JPanel panelTelegramContent;
-  private JLabel labelStateTeleCount;
-  private JTextField textFieldStateTeleCount;
-  private JLabel labelStateOS;
-  private JTextField textFieldStateOS;
-  private JLabel labelStateLS;
-  private JTextField textFieldStateLS;
-  private JLabel labelStateCRP;
-  private JTextField textFieldStateCRP;
-  private JLabel fillingLabel2;
-  private JLabel labelLastOrderID;
-  private JTextField textFieldLastOrderID;
-  private JLabel labelCurrOrderID;
-  private JTextField textFieldCurrOrderID;
-  private JLabel labelLastRcvdOrderID;
-  private JTextField textFieldLastRcvdOrderID;
-  private JLabel fillingLabel1;
+  private javax.swing.JButton buttonGetState;
+  private javax.swing.JCheckBox chkBoxEnablePeriodicGetState;
+  private javax.swing.JLabel fillingLabel1;
+  private javax.swing.JLabel fillingLabel2;
+  private javax.swing.JLabel labelCurrOrderID;
+  private javax.swing.JLabel labelGetStateInterval;
+  private javax.swing.JLabel labelLastOrderID;
+  private javax.swing.JLabel labelLastRcvdOrderID;
+  private javax.swing.JLabel labelStateCRP;
+  private javax.swing.JLabel labelStateLS;
+  private javax.swing.JLabel labelStateOS;
+  private javax.swing.JLabel labelStateTeleCount;
+  private javax.swing.JPanel panelManualStateRequest;
+  private javax.swing.JPanel panelPeriodicStateRequests;
+  private javax.swing.JPanel panelState;
+  private javax.swing.JPanel panelTelegramContent;
+  private javax.swing.Box.Filler panelTelegramContentFiller;
+  private javax.swing.JTextField textFieldCurrOrderID;
+  private javax.swing.JTextField textFieldLastOrderID;
+  private javax.swing.JTextField textFieldLastRcvdOrderID;
+  private javax.swing.JTextField textFieldStateCRP;
+  private javax.swing.JTextField textFieldStateLS;
+  private javax.swing.JTextField textFieldStateOS;
+  private javax.swing.JTextField textFieldStateTeleCount;
+  private javax.swing.JTextField txtGetStateInterval;
   // End of variables declaration//GEN-END:variables
 }
